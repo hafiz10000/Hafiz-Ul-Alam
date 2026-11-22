@@ -660,6 +660,31 @@
     font-family:var(--mono); font-size:0.74rem; letter-spacing:.08em; text-transform:uppercase;
     color:var(--blue-mid); margin-bottom:1.1rem; padding-bottom:0.6rem; border-bottom:1px solid var(--blue-line);
   }
+
+  /* ---------- ORGANISATION NAMES ----------
+     Company, university and issuer names are set bold (display font) so they stand out from the grey body text.
+     Only weights that are already on the site are used: Space Grotesk 400-700, IBM Plex Sans 400/600/700, IBM Plex Mono 400/500/600. */
+
+  /* Experience: company on its own bold line, job title under it in the accent colour, dates at the right */
+  .exp-card .card-kicker{ align-items:flex-start; margin-bottom:1rem; text-transform:none; letter-spacing:0; }
+  .exp-head{ display:flex; flex-direction:column-reverse; gap:0.3rem; flex:1 1 300px; min-width:0; }
+  .exp-head .org{ font-family:var(--display); font-weight:700; font-size:1.32rem; line-height:1.2; letter-spacing:-0.01em; color:var(--heading); }
+  .exp-head .org .loc{ font-weight:400; color:var(--ink-soft); }
+  .exp-head .role{ font-family:var(--body); font-weight:600; font-size:0.98rem; line-height:1.4; color:var(--amber-ink); }
+  .exp-card .when{ font-family:var(--mono); font-size:0.74rem; letter-spacing:.06em; text-transform:uppercase; color:var(--blue-mid); white-space:nowrap; padding-top:0.5rem; }
+
+  /* Education: the university in bold display type above the degree */
+  .edu-block .card-kicker{ align-items:baseline; }
+  .edu-block .card-kicker .org{ font-family:var(--display); font-weight:700; font-size:1.08rem; line-height:1.3; letter-spacing:0; text-transform:none; color:var(--heading); }
+
+  @media (max-width:560px){ .exp-card .when{ padding-top:0; } }
+
+  /* hero facts, impact labels and running text: organisation names a notch heavier */
+  .spec-row .v b, .lede b, .about-grid p b, .impact-label b{ font-weight:600; color:var(--heading); }
+  .spec-row .v b, .impact-label b{ white-space:nowrap; }   /* keep "PRAN-RFL" and "FAR Oil & Gas Ltd." from splitting across lines */
+
+  /* credentials: issuer names semi-bold */
+  .tag-card .issuer, .cred-chip .cc-issuer b{ font-weight:600; }
 </style>
 </head>
 <body>
@@ -692,7 +717,7 @@
       <div>
         <p class="eyebrow">Supply Chain &amp; Procurement · Industrial Engineering</p>
         <h1>Supply Chain &amp; Procurement professional who turns data into better decisions.</h1>
-        <p class="lede">Industrial &amp; Production Engineering graduate from MIST with experience across procurement, sourcing, inventory, operations planning, and process improvement — in energy, FMCG, manufacturing, and textiles.</p>
+        <p class="lede">Industrial &amp; Production Engineering graduate from <b>MIST</b> with experience across procurement, sourcing, inventory, operations planning, and process improvement — in energy, FMCG, manufacturing, and textiles.</p>
         <div class="cta-row">
           <a class="btn btn-solid" id="cvDownloadBtn" href="cv/Hafiz-Ul-Alam-CV.pdf" download="Hafiz-Ul-Alam-CV.pdf">Download CV ↓</a>
           <a class="btn btn-line" href="https://www.linkedin.com/in/hafiz-ul-alam" target="_blank" rel="noopener">LinkedIn</a>
@@ -700,9 +725,9 @@
         </div>
         <div class="spec-row">
           <div><span class="k">Focus</span><span class="v">Supply Chain · Procurement · Operations · Analytics</span></div>
-          <div><span class="k">Education</span><span class="v">M.Sc. AEM, BUET (in progress) · B.Sc. IPE, MIST</span></div>
+          <div><span class="k">Education</span><span class="v">M.Sc. AEM, <b>BUET</b> (in progress) · B.Sc. IPE, <b>MIST</b></span></div>
           <div><span class="k">Location</span><span class="v">Dhaka, Bangladesh</span></div>
-          <div><span class="k">Current Role</span><span class="v">Senior Executive – Supply Chain · FAR Oil &amp; Gas Ltd.</span></div>
+          <div><span class="k">Current Role</span><span class="v">Senior Executive – Supply Chain · <b>FAR Oil &amp; Gas Ltd.</b></span></div>
         </div>
       </div>
       <div class="hero-photo">
@@ -723,7 +748,7 @@
       </div>
       <div class="about-grid">
         <div class="reveal">
-          <p>I'm an Industrial &amp; Production Engineering graduate from MIST who moved into supply chain and procurement. Over the past two years I've worked across four organizations — a textile manufacturer, a hardware producer, an FMCG company, and now an oil &amp; gas company — handling procurement, sourcing, inventory, and operations planning.</p>
+          <p>I'm an Industrial &amp; Production Engineering graduate from <b>MIST</b> who moved into supply chain and procurement. Over the past two years I've worked across four organizations — a textile manufacturer, a hardware producer, an FMCG company, and now an oil &amp; gas company — handling procurement, sourcing, inventory, and operations planning.</p>
           <p>My engineering background shapes how I approach the work: I look for the process behind the purchase order, the bottleneck behind the delay, and the data that explains why a number moved. That combination — procurement experience plus an analytical, process-improvement mindset — is what I bring to a supply chain team.</p>
         </div>
         <div class="about-facts reveal">
@@ -754,15 +779,15 @@
       <div class="impact-grid">
         <div class="impact-card reveal">
           <div class="impact-num">2×</div>
-          <div class="impact-label">Production output at PRAN-RFL — from ~900 to 1,800 units/day</div>
+          <div class="impact-label">Production output at <b>PRAN-RFL</b> — from ~900 to 1,800 units/day</div>
         </div>
         <div class="impact-card reveal">
           <div class="impact-num">15%</div>
-          <div class="impact-label">Reduction in major fabric defects, Amanat Shah Six Sigma DMAIC project</div>
+          <div class="impact-label">Reduction in major fabric defects, <b>Amanat Shah</b> Six Sigma DMAIC project</div>
         </div>
         <div class="impact-card reveal">
           <div class="impact-num">9.34×</div>
-          <div class="impact-label">Cost reduction from switching to reusable plastic rolls, Amanat Shah</div>
+          <div class="impact-label">Cost reduction from switching to reusable plastic rolls, <b>Amanat Shah</b></div>
         </div>
         <div class="impact-card reveal">
           <div class="impact-num">BDT 90K</div>
@@ -797,7 +822,7 @@
       </div>
 
       <div class="exp-card reveal card">
-        <div class="card-kicker"><span>Senior Executive – Supply Chain · FAR Oil &amp; Gas Limited, Dhaka</span><span>Aug 2026 – Present</span></div>
+        <div class="card-kicker"><span class="exp-head"><span class="role">Senior Executive – Supply Chain</span><span class="visually-hidden"> · </span><b class="org">FAR Oil &amp; Gas Limited<span class="loc">, Dhaka</span></b></span><span class="when">Aug 2026 – Present</span></div>
         <p class="exp-context">Oil &amp; gas sector — Procurement &amp; Supply Chain</p>
 
         <div class="subgroup">
@@ -825,7 +850,7 @@
       </div>
 
       <div class="exp-card reveal card">
-        <div class="card-kicker"><span>Supply Chain Executive · Khaas Food Ltd., Dhaka</span><span>Dec 2025 – Aug 2026</span></div>
+        <div class="card-kicker"><span class="exp-head"><span class="role">Supply Chain Executive</span><span class="visually-hidden"> · </span><b class="org">Khaas Food Ltd.<span class="loc">, Dhaka</span></b></span><span class="when">Dec 2025 – Aug 2026</span></div>
         <p class="exp-context">FMCG manufacturer — spices &amp; packaged food products (Sourcing &amp; Planning)</p>
         <ul class="exp-list">
           <li>Executed <b>ERP-based procurement</b> covering PR–PO–GRN processes for raw and packaging materials to support uninterrupted production.</li>
@@ -837,7 +862,7 @@
       </div>
 
       <div class="exp-card reveal card">
-        <div class="card-kicker"><span>Trainee Engineer — Operations Planning · PRAN-RFL Group, RMIL Division</span><span>Aug – Dec 2025</span></div>
+        <div class="card-kicker"><span class="exp-head"><span class="role">Trainee Engineer — Operations Planning</span><span class="visually-hidden"> · </span><b class="org">PRAN-RFL Group<span class="loc">, RMIL Division</span></b></span><span class="when">Aug – Dec 2025</span></div>
         <p class="exp-context">Door accessories manufacturing — hinge &amp; hardware products</p>
         <ul class="exp-list">
           <li>Redesigned production workflow through cycle-time analysis and line balancing, raising daily output from <b>~900 to 1,800 units</b>.</li>
@@ -851,7 +876,7 @@
       </div>
 
       <div class="exp-card reveal card">
-        <div class="card-kicker"><span>Industrial Engineering Intern · Amanat Shah Group – Fabrics, Pachdona</span><span>Feb – Mar 2024</span></div>
+        <div class="card-kicker"><span class="exp-head"><span class="role">Industrial Engineering Intern</span><span class="visually-hidden"> · </span><b class="org">Amanat Shah Group – Fabrics<span class="loc">, Pachdona</span></b></span><span class="when">Feb – Mar 2024</span></div>
         <p class="exp-context">Textile manufacturer — woven fabrics for domestic and export markets</p>
         <ul class="exp-list">
           <li>Directed a <b>Six Sigma DMAIC project</b> across 1.78 million yards of production data, achieving a 15% reduction in major fabric defects.</li>
@@ -862,12 +887,12 @@
       </div>
 
       <div class="exp-card reveal card">
-        <div class="card-kicker"><span>Data Science &amp; Business Analytics Intern · The Sparks Foundation</span><span>Jan – Jun 2024</span></div>
+        <div class="card-kicker"><span class="exp-head"><span class="role">Data Science &amp; Business Analytics Intern</span><span class="visually-hidden"> · </span><b class="org">The Sparks Foundation</b></span><span class="when">Jan – Jun 2024</span></div>
         <p class="exp-context">Remote internship program</p>
       </div>
 
       <div class="exp-card reveal card">
-        <div class="card-kicker"><span>Intern · Youth School for Social Entrepreneurs (YSSE)</span><span>Feb – Aug 2023</span></div>
+        <div class="card-kicker"><span class="exp-head"><span class="role">Intern</span><span class="visually-hidden"> · </span><b class="org">Youth School for Social Entrepreneurs (YSSE)</b></span><span class="when">Feb – Aug 2023</span></div>
         <p class="exp-context">Social entrepreneurship program, Bangladesh</p>
       </div>
 
@@ -884,7 +909,7 @@
 
       <div class="edu-block reveal">
         <div class="card">
-          <div class="card-kicker"><span>Bangladesh University of Engineering and Technology (BUET)</span><span>2026 – Present</span></div>
+          <div class="card-kicker"><b class="org">Bangladesh University of Engineering and Technology (BUET)</b><span>2026 – Present</span></div>
           <h3>M.Sc. in Advanced Engineering Management (AEM)</h3>
           <div class="edu-minor" style="margin-top:0.4rem; padding-top:0;border-top:none;">
             <div class="edu-minor-row">
@@ -897,7 +922,7 @@
 
       <div class="edu-block reveal">
         <div class="card">
-          <div class="card-kicker"><span>Military Institute of Science and Technology (MIST)</span><span>2021 – 2025</span></div>
+          <div class="card-kicker"><b class="org">Military Institute of Science and Technology (MIST)</b><span>2021 – 2025</span></div>
           <h3>B.Sc. in Industrial &amp; Production Engineering</h3>
           <div class="edu-minor" style="margin-top:0.4rem; padding-top:0;border-top:none;">
             <div class="edu-minor-row">
@@ -1334,22 +1359,22 @@
         <div class="cred-compact">
           <div class="cred-chip">
             <span class="cc-title">Visual Identity &amp; Graphic Design</span>
-            <span class="cc-issuer">GP Academy · Brightskills · Mar 2023</span>
+            <span class="cc-issuer"><b>GP Academy · Brightskills</b> · Mar 2023</span>
             <button type="button" class="view-cert" data-cert="cert_graphicdesign">View →</button>
           </div>
           <div class="cred-chip">
             <span class="cc-title">MS PowerPoint — Advanced</span>
-            <span class="cc-issuer">GP Academy · Brightskills · Mar 2023</span>
+            <span class="cc-issuer"><b>GP Academy · Brightskills</b> · Mar 2023</span>
             <button type="button" class="view-cert" data-cert="cert_ppt">View →</button>
           </div>
           <div class="cred-chip">
             <span class="cc-title">Professional Content Writing</span>
-            <span class="cc-issuer">GP Academy · Brightskills · Feb 2023</span>
+            <span class="cc-issuer"><b>GP Academy · Brightskills</b> · Feb 2023</span>
             <button type="button" class="view-cert" data-cert="cert_contentwriting">View →</button>
           </div>
           <div class="cred-chip">
             <span class="cc-title">MS Excel — Beginner to Advanced</span>
-            <span class="cc-issuer">GP Academy · Brightskills · Feb 2023</span>
+            <span class="cc-issuer"><b>GP Academy · Brightskills</b> · Feb 2023</span>
             <button type="button" class="view-cert" data-cert="cert_excel">View →</button>
           </div>
           <div class="cred-chip">
